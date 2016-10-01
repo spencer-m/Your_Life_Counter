@@ -1,2 +1,2 @@
-# Your_Life_Counter
+# Your Life Counter
 Software Engineering Project
