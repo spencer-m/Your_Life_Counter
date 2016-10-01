@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/rectimage"
+            android:layout_height="200dp"
+            android:layout_width="match_parent"
+            android:src="@drawable/rectangle2"
+            android:background="#FFFFFF"
+            android:elevation="2dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:id="@+id/droplet"
+            android:layout_height="100dp"
+            android:layout_width="105dp"
+            android:src="@drawable/dropletblue"
+            android:elevation="4dp"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:layout_width="230dp"
+            android:layout_height="50dp"
+            android:text="Water Remaining:"
+            android:id="@+id/textView"
+            android:textColor="@color/WaterStatus"
+            android:textSize="25dp"
+            android:fontFamily="sans-serif-light"
+            android:alpha="0.7"
+            android:elevation="4dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:layout_alignTop="@+id/rectimage"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="270dp"
+            android:layout_height="100dp"
+            android:id="@+id/waterRem"
+            android:textColor="@color/WaterStatus"
+            android:fontFamily="sans-serif-light"
+            android:elevation="2dp"
+            android:textSize="40dp"
+            android:gravity="center"
+            android:text="Set your water goal!"
+            android:layout_alignTop="@+id/droplet"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textIsSelectable="false" />
+
+</RelativeLayout>

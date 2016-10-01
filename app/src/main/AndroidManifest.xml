@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.group19.seng301_w2016.yourlifecounter">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/wow"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/MyMaterialTheme">
+        <activity
+            android:name=".splashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="Your Life Counter"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Progress"
+            android:label="Progress"
+            android:theme="@style/ProgressTheme" />
+        <activity
+            android:name=".WaterIntake"
+            android:label="Water Intake"
+            android:theme="@style/WaterTheme" />
+        <activity
+            android:name=".Diary"
+            android:label="Diary"
+            android:theme="@style/DiaryTheme" />
+        <activity
+            android:name=".Settings"
+            android:label="Settings"
+            android:theme="@style/SettingsTheme" />
+        <activity
+            android:name=".Goals"
+            android:label="Goals" />
+        <activity
+            android:name=".createNew"
+            android:label="Create New"
+            android:theme="@style/CreateFoodTheme" />
+        <activity
+            android:name=".searchFood"
+            android:label="Search Food"
+            android:theme="@style/SearchingTheme" />
+    </application>
+
+</manifest>

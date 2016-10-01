@@ -1,0 +1,263 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:orientation="horizontal">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:id="@+id/tabHost2">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_top"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#FFC107"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Diary"
+                    android:textColor="#ffffff"
+                    android:textSize="21dp"
+                    android:layout_toRightOf="@+id/diaryIcon"
+                    android:layout_toEndOf="@+id/diaryIcon">
+                </TextView>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/diaryicon"
+                    android:id="@+id/diaryIcon"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"></ImageView>
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <TabHost
+        android:id="@+id/tabHost"
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tabHost2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Current Calorie Count"
+                android:id="@+id/textView3"
+                android:layout_gravity="center_horizontal"
+                android:textSize="20dp"
+                android:fontFamily="sans-serif-light"/>
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="300dp"
+                android:layout_height="20dp"
+                android:id="@+id/progressBar"
+                android:layout_gravity="center_horizontal"
+                android:alpha="100"
+                android:layout_marginTop="10dp"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/custom_progress_bar_horizontal"
+                android:background="#FFFFFF"/>
+
+            <TextView
+                android:layout_width="263dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text=" "
+                android:fontFamily="sans-serif-light"
+                android:id="@+id/calorieTotal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="0dp"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.5"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="20dp"
+                android:id="@+id/view"
+                android:layout_below="@+id/textView2"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal" />
+
+            <TabWidget
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@android:id/tabs">
+            </TabWidget>
+
+            // CONTENT OF TABS
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:singleLine="true"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/tab1list">
+                    </ListView>
+
+                </RelativeLayout>
+
+                // CONTENT OF TAB 2
+                <RelativeLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:singleLine="true"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/tab2list">
+                    </ListView>
+                </RelativeLayout>
+
+                // CONTENT OF TAB 3
+                <RelativeLayout
+                    android:id="@+id/tab3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:singleLine="true"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/tab3list">
+                    </ListView>
+                </RelativeLayout>
+
+                // CONTENT OF TAB 4
+                <RelativeLayout
+                    android:id="@+id/tab4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:singleLine="true"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/tab4list">
+                    </ListView>
+                </RelativeLayout>
+            </FrameLayout>
+
+        </LinearLayout>
+    </TabHost>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        fab:menu_colorNormal="#FFC107"
+        fab:menu_colorPressed="#FFEB3B"
+        fab:menu_colorRipple="#ccFFFFFF"
+        fab:menu_labels_ellipsize="end"
+        fab:menu_labels_singleLine="true"
+        fab:menu_backgroundColor="#cc000000"
+        fab:menu_fab_label="">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_search"
+            app:fab_colorNormal="@color/SearchStatus"
+            app:fab_colorPressed="@color/SearchStatus"
+            app:fab_colorRipple="#ccFFFFFF"
+            app:fab_shadowColor="#66000000"
+            fab:backgroundTint="#FFFFFF"
+            fab:fab_label="Search Food" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/ProgressStatus"
+            app:fab_colorPressed="@color/ProgressStatus"
+            app:fab_colorRipple="#ccFFFFFF"
+            app:fab_shadowColor="#66000000"
+            android:src="@android:drawable/ic_menu_edit"
+            fab:backgroundTint="#FFFFFF"
+            fab:fab_label="Create New" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/WaterStatus"
+            app:fab_colorPressed="@color/WaterStatus"
+            app:fab_colorRipple="#ccFFFFFF"
+            app:fab_shadowColor="#66000000"
+            android:src="@android:drawable/ic_menu_edit"
+            fab:backgroundTint="#FFFFFF"
+            fab:fab_label="Water Intake" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_colorPressed="@color/colorPrimary"
+            app:fab_colorRipple="#ccFFFFFF"
+            app:fab_shadowColor="#66000000"
+            android:src="@android:drawable/ic_menu_edit"
+            fab:backgroundTint="#FFFFFF"
+            fab:fab_label="Home" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>

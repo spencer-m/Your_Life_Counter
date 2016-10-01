@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:orientation="horizontal">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_top"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#03A9F4"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Water Intake"
+                    android:textColor="#ffffff"
+                    android:textSize="21dp"
+                    android:layout_toRightOf="@+id/waterIcon"
+                    android:layout_toEndOf="@+id/waterIcon"></TextView>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/watericon"
+                    android:id="@+id/waterIcon"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"></ImageView>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:elevation="6dp"
+        fab:menu_colorNormal="@color/WaterStatus"
+        fab:menu_colorPressed="@color/WaterStatus"
+        fab:menu_colorRipple="#ccFFFFFF"
+        fab:menu_labels_ellipsize="end"
+        fab:menu_labels_singleLine="true"
+        fab:menu_backgroundColor="#cc000000"
+        fab:menu_fab_label="">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_colorPressed="@color/colorPrimary"
+            app:fab_colorRipple="#ccFFFFFF"
+            app:fab_shadowColor="#66000000"
+            android:src="@android:drawable/ic_menu_edit"
+            fab:backgroundTint="#FFFFFF"
+            fab:fab_label="Home" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+    <ImageView
+        android:id="@+id/rectimage"
+        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:src="@drawable/rectangle"
+        android:background="#03A9F4"
+        android:layout_below="@+id/appbar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:elevation="3dp" />
+
+    <ImageView
+        android:id="@+id/droplet"
+        android:layout_height="100dp"
+        android:layout_width="100dp"
+        android:src="@drawable/droplet"
+        android:elevation="4dp"
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/waterTotal"
+        android:layout_alignLeft="@+id/waterTotal"
+        android:layout_alignStart="@+id/waterTotal" />
+
+    <EditText
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/waterAmount"
+        android:width="200dp"
+        android:textSize="25dp"
+        android:hint="Add Amount"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="42dp"
+        android:backgroundTint="@color/WaterStatus"
+        android:layout_marginLeft="41dp"
+        android:layout_marginStart="41dp"
+        android:layout_below="@+id/rectimage"
+        android:layout_alignLeft="@+id/droplet"
+        android:layout_alignStart="@+id/droplet" />
+    <requestFocus/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  mL"
+        android:id="@+id/waterMeasure"
+        android:width="50dp"
+        android:textSize="25dp"
+        android:layout_alignTop="@+id/waterAmount"
+        android:layout_toRightOf="@+id/waterAmount"
+        android:layout_toEndOf="@+id/waterAmount"
+        android:layout_alignBottom="@+id/waterAmount"
+        android:paddingTop="10dp"
+        android:fontFamily="sans-serif-light"/>
+
+    <Button
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:text="Add Water"
+        android:id="@+id/waterButton"
+        android:textSize="14dp"
+        android:textColor="#FFFFFF"
+        android:elevation="2dp"
+        style="?android:attr/buttonStyleSmall"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="48dp"
+        android:layout_below="@+id/waterAmount"
+        android:background="@drawable/roundcornerwater"
+        android:layout_centerHorizontal="true" />
+    <requestFocus/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Water Total: "
+        android:id="@+id/waterTotal"
+        android:width="150dp"
+        android:textSize="25dp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="19dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="10dp"
+        android:elevation="3dp"
+        android:layout_alignTop="@+id/rectimage"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="240dp"
+        android:layout_height="130dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/totalWaterOutput"
+        android:textSize="48dp"
+        android:text=""
+        android:gravity="center"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#FFFFFF"
+        android:elevation="3dp"
+        android:layout_alignTop="@+id/droplet"
+        android:layout_alignLeft="@+id/waterButton"
+        android:layout_alignStart="@+id/waterButton" />
+
+    </RelativeLayout>

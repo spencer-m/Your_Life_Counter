@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F44336</color>
+    <color name="colorPrimaryDark">#E53935</color>
+    <color name="textColorPrimary">#000000</color>
+    <color name="windowBackground">#E53935</color>
+    <color name="navigationBarColor">#E53935</color>
+    <color name="colorAccent">#FFC107</color>
+
+    <color name="ProgressStatus">#43A047</color>
+    <color name="WaterStatus">#039BE5</color>
+    <color name="DiaryStatus">#FFB300</color>
+    <color name="SettingStatus">#757575</color>
+    <color name="CreateStatus">#F06292</color>
+
+    <color name="SearchActionBar">#009688</color>
+    <color name="SearchStatus">#00897B</color>
+
+    <color name="gray">#757575</color>
+
+</resources>

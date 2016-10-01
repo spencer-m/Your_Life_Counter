@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_top"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#607D8B"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textColor="#ffffff"
+                android:textSize="21dp"
+                android:layout_toRightOf="@+id/settingsIcon"
+                android:layout_toEndOf="@+id/settingsIcon"></TextView>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/settingsicon"
+                android:id="@+id/settingsIcon"
+                android:layout_marginRight="7dp"
+                android:layout_marginEnd="7dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"></ImageView>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/proficon"
+        android:alpha="0.2"
+        android:id="@+id/imageView"
+        android:layout_alignTop="@+id/myProfile"
+        android:layout_alignLeft="@+id/imageView4"
+        android:layout_alignStart="@+id/imageView4"
+        android:layout_marginTop="13dp" />
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:text="\nMy Profile"
+        android:id="@+id/myProfile"
+        android:textSize="20dp"
+        android:background="?attr/selectableItemBackground"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/toolbar_top"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <View
+        android:layout_width="280dp"
+        android:layout_height="1dp"
+        android:alpha="0.5"
+        android:background="@android:color/darker_gray"
+        android:id="@+id/view"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/myProfile"
+        android:layout_alignRight="@+id/reminderss"
+        android:layout_alignEnd="@+id/reminderss" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/alarm"
+        android:alpha="0.2"
+        android:id="@+id/imageView4"
+        android:layout_below="@+id/view"
+        android:layout_alignLeft="@+id/imageView3"
+        android:layout_alignStart="@+id/imageView3"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:text="\nReminders"
+        android:id="@+id/reminderss"
+        android:textSize="20dp"
+        android:layout_below="@+id/view"
+        android:layout_alignLeft="@+id/myProfile"
+        android:layout_alignStart="@+id/myProfile"
+        android:layout_alignRight="@+id/myProfile"
+        android:layout_alignEnd="@+id/myProfile" />
+
+    <View
+        android:layout_width="280dp"
+        android:layout_height="1dp"
+        android:alpha="0.5"
+        android:background="@android:color/darker_gray"
+        android:id="@+id/view2"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/reminderss"
+        android:layout_alignRight="@+id/reminderss"
+        android:layout_alignEnd="@+id/reminderss" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/nutrition"
+        android:alpha="0.2"
+        android:id="@+id/imageView3"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="9dp"
+        android:layout_below="@+id/view2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:text="\nNutrition"
+        android:id="@+id/nutrition"
+        android:textSize="20dp"
+        android:layout_below="@+id/reminderss"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <View
+        android:layout_width="280dp"
+        android:layout_height="1dp"
+        android:alpha="0.5"
+        android:background="@android:color/darker_gray"
+        android:id="@+id/view3"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignBottom="@+id/nutrition"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/goals"
+        android:alpha="0.2"
+        android:id="@+id/imageView2"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/view3"
+        android:layout_alignLeft="@+id/imageView3"
+        android:layout_alignStart="@+id/imageView3" />
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:text="\nMy Goals"
+        android:id="@+id/goals"
+        android:textSize="21dp"
+        android:layout_alignTop="@+id/view3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>

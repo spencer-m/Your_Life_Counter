@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_top"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#689F38"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Goals"
+                android:textColor="#ffffff"
+                android:textSize="21dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/progressIcon"
+                android:layout_toEndOf="@+id/progressIcon"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/progressicon"
+                android:id="@+id/progressIcon"
+                android:layout_marginRight="7dp"
+                android:layout_marginEnd="7dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Calorie Goal"
+        android:fontFamily="sans-serif-light"
+        android:id="@+id/calorieGoal"
+        android:layout_marginTop="140dp"
+        android:background="#689F38"
+        android:textColor="#ffffff"
+        android:minWidth="200dp"
+        android:nestedScrollingEnabled="false"
+        android:minHeight="55dp"
+        android:layout_below="@+id/toolbar_top"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Water Goal"
+        android:fontFamily="sans-serif-light"
+        android:id="@+id/waterGoal"
+        android:textColor="#ffffff"
+        android:background="#689F38"
+        android:minWidth="200dp"
+        android:nestedScrollingEnabled="false"
+        android:minHeight="55dp"
+        android:layout_below="@+id/calorieGoal"
+        android:layout_alignLeft="@+id/calorieGoal"
+        android:layout_alignStart="@+id/calorieGoal"
+        android:layout_marginTop="92dp" />
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        fab:menu_colorNormal="#689F38"
+        fab:menu_colorPressed="#689F38"
+        fab:menu_colorRipple="#ccFFFFFF"
+        fab:menu_labels_ellipsize="end"
+        fab:menu_labels_singleLine="true"
+        fab:menu_backgroundColor="#ccFFFFFF"
+        fab:menu_fab_label=""
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/chart"
+            app:fab_colorNormal="@color/ProgressStatus"
+            app:fab_colorPressed="@color/ProgressStatus"
+            app:fab_colorRipple="#ccFFFFFF"
+            app:fab_shadowColor="#66000000"
+            fab:fab_label="Progress" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/water"
+            app:fab_colorNormal="@color/WaterStatus"
+            app:fab_colorPressed="@color/WaterStatus"
+            app:fab_colorRipple="#ccFFFFFF"
+            app:fab_shadowColor="#66000000"
+            fab:backgroundTint="#FFFFFF"
+            fab:fab_label="Water Intake" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/create"
+            app:fab_colorNormal="@color/DiaryStatus"
+            app:fab_colorPressed="@color/DiaryStatus"
+            app:fab_colorRipple="#ccFFFFFF"
+            app:fab_shadowColor="#66000000"
+            fab:backgroundTint="#FFFFFF"
+            fab:fab_label="Diary" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/WaterStatus"
+            app:fab_colorPressed="@color/WaterStatus"
+            app:fab_colorRipple="#ccFFFFFF"
+            app:fab_shadowColor="#66000000"
+            android:src="@android:drawable/ic_menu_edit"
+            fab:backgroundTint="#FFFFFF"
+            fab:fab_label="Water Intake" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/colorPrimary"
+            app:fab_colorPressed="@color/colorPrimary"
+            app:fab_colorRipple="#ccFFFFFF"
+            app:fab_shadowColor="#66000000"
+            android:src="@android:drawable/ic_menu_edit"
+            fab:backgroundTint="#FFFFFF"
+            fab:fab_label="Home" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+</RelativeLayout>

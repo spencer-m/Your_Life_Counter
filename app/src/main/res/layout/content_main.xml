@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.group19.seng301_w2016.yourlifecounter.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+
+    <!--
+    <ImageView
+        android:id="@+id/rectimage"
+        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:src="@drawable/rectangle2"
+        android:background="#FFFFFF"
+        android:layout_below="@+id/appbar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:elevation="3dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:id="@+id/burger"
+        android:layout_height="110dp"
+        android:layout_width="105dp"
+        android:src="@drawable/burger"
+        android:elevation="4dp"
+        android:layout_above="@+id/rvProfiles"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <TextView
+        android:layout_width="230dp"
+        android:layout_height="50dp"
+        android:text="Calories Remaining:"
+        android:id="@+id/textView"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25dp"
+        android:fontFamily="sans-serif-light"
+        android:alpha="0.7"
+        android:elevation="4dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Water Intake:"
+        android:id="@+id/textView2"
+        android:layout_marginTop="62dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25dp"
+        android:fontFamily="sans-serif-light"
+        android:alpha="0.7"
+        android:elevation="3dp"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+        -->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvProfiles"
+        android:layout_width="match_parent"
+        android:layout_height="275dp"
+        android:scrollbars="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+    </android.support.v7.widget.RecyclerView>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/profileViewer"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:fadingEdge="vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <View
+        android:layout_width="125dp"
+        android:layout_height="2dp"
+        android:alpha="0.5"
+        android:background="@color/colorPrimary"
+        android:id="@+id/view"
+        android:layout_gravity="center_horizontal"
+        android:layout_above="@+id/rvProfiles"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Summary :"
+        android:id="@+id/summaryTitle"
+        android:fontFamily="sans-serif-light"
+        android:elevation="3dp"
+        android:textSize="18dp"
+        android:singleLine="false"
+        android:layout_above="@+id/rvProfiles"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold" />
+
+</RelativeLayout>
