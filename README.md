@@ -10,3 +10,10 @@ Additionally, users can input their calorie and water goals so that they can try
 * Track water intake goal
 * A large database to search for predefined food entries 
 * Create your own food entry
+
+### Contributors:
+
+- [Jenny Le](https://github.com/Jennykuma)
+- Kasy Wong
+- Nathan Dien
+- [Spencer Manzon](https://github.com/spencer-m)
