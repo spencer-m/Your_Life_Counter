@@ -11,6 +11,10 @@ Additionally, users can input their calorie and water goals so that they can try
 * A large database to search for predefined food entries 
 * Create your own food entry
 
+### Demo (Press image to play video):
+
+[![ScreenShot](https://github.com/spencer-m/Your_Life_Counter/blob/master/Screenshot_YourLifeCounter.png?raw=true)](https://youtu.be/oQUFQ9quxLs)
+
 ### Contributors:
 
 - [Jenny Le](https://github.com/Jennykuma)
