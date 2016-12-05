@@ -18,6 +18,6 @@ Additionally, users can input their calorie and water goals so that they can try
 ### Contributors:
 
 - [Jenny Le](https://github.com/Jennykuma)
-- [Kasy Wong] (https://github.com/kasyw)
-- Nathan Dien
+- [Kasy Wong](https://github.com/kasyw)
+- [Nathan Dien](https://github.com/nathandien)
 - [Spencer Manzon](https://github.com/spencer-m)
